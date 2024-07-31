@@ -13,33 +13,56 @@
     <title>Weather</title>
   </head>
   <body>
-    <div class="weather-app">
-      <header>
-        <form>
-          <input type="search" placeholder="Enter a city..." />
-          <input type="submit" value="search" />
-        </form>
-      </header>
-      <main>
-        <div>
-          <h1>Paris</h1>
-          <span>Tuesday 12:17</span>
-          <br />
-          <span>cloudy</span>
-        </div>
-        <br />
-        <div>⛅ 12°C</div>
-      </main>
-
-      <footer>
-        Coded by
-        <a href="https://github.com/Mohammadreza-24" target="_blank"
-          >Mohammadreza Bayat</a
-        >, is
-        <a href="https://github.com/Mohammadreza-24/Weather-App" target="_blank"
-          >open-sourced on GitHub</a
-        >
-      </footer>
+    <div class="container">
+      <div class="weather-app">
+        <header>
+          <form class="search-form">
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              required
+              class="search-form-input"
+            />
+            <input
+              type="submit"
+              value="search"
+              required
+              class="search-button"
+            />
+          </form>
+        </header>
+        <main>
+          <h1 class="weather-app-city">Paris</h1>
+          <p class="weather-app-details">
+            July 31, 15:16
+            <br />
+            Cloudy
+          </p>
+          <div class="weather-app-data">
+            <div class="weather-app-temp-container">
+              <div class="weather-app-icon">⛅</div>
+              <div class="weather-app-temp">12</div>
+              <div class="weather-app-unit">°C</div>
+            </div>
+            <ul class="weather-app-condition">
+              <li>Precipitation: 0%</li>
+              <li>Humidity: 48%</li>
+              <li>Wind: 16 km/h</li>
+            </ul>
+          </div>
+        </main>
+        <footer>
+          Coded by
+          <a href="https://github.com/Mohammadreza-24" target="_blank"
+            >Mohammadreza Bayat</a
+          >, is
+          <a
+            href="https://github.com/Mohammadreza-24/Weather-App"
+            target="_blank"
+            >open-sourced on GitHub</a
+          >
+        </footer>
+      </div>
     </div>
   </body>
 </html>
