@@ -16,11 +16,12 @@
     <div class="container">
       <div class="weather-app">
         <header>
-          <form class="search-form">
+          <form class="search-form" id="search-form">
             <input
               type="search"
               placeholder="Enter a city..."
               required
+              id="search-form-input"
               class="search-form-input"
             />
             <input
@@ -32,7 +33,7 @@
           </form>
         </header>
         <main>
-          <h1 class="weather-app-city">Paris</h1>
+          <h1 class="weather-app-city" id="city">Paris</h1>
           <p class="weather-app-details">
             July 31, 15:16
             <br />
@@ -42,7 +43,9 @@
             <div class="weather-app-temp-container">
               <div class="weather-app-icon">⛅</div>
               <div class="weather-app-temp">12</div>
-              <div class="weather-app-unit">°C</div>
+              <div class="weather-app-unit">
+                <a id="#clink" href="#">°C</a>|<a id="flink" href="#">°F</a>
+              </div>
             </div>
             <ul class="weather-app-condition">
               <li>Precipitation: 0%</li>
@@ -64,5 +67,6 @@
         </footer>
       </div>
     </div>
+    <script src="src/app.js"></script>
   </body>
 </html>

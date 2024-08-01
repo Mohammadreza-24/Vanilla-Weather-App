@@ -5,6 +5,7 @@ body {
 
 a {
   color: #362fd9;
+  text-decoration: none;
 }
 
 .weather-app {
@@ -98,10 +99,10 @@ main {
 
 .weather-app-unit {
   margin-top: 15px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-footer {
+.weather-app-unit footer {
   border-top: 1px solid #eef5ff;
   padding: 30px 0 0 0;
   text-align: center;
