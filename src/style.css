@@ -86,9 +86,8 @@ main {
   display: flex;
 }
 
-.weather-app-icon {
-  font-size: 44px;
-  margin-top: 23px;
+#icon {
+  width: 80px;
 }
 
 .weather-app-temp {
@@ -102,13 +101,6 @@ main {
   font-size: 25px;
 }
 
-.weather-app-unit footer {
-  border-top: 1px solid #eef5ff;
-  padding: 30px 0 0 0;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 400;
-}
 footer {
   border-top: 1px solid #f9f7fe;
   padding: 30px 0 0 0;
