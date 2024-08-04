@@ -41,8 +41,10 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let wind = document.querySelector("#wind-speed");
   let iconElement = document.querySelector("#icon");
+  let tempCelsius = response.data.main.temp;
 
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(tempCelsius);
+  updateTemperatureUnit(tempCelsius);
   cityElement.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   precipitationElement.innerHTML = response.data.clouds.all;
@@ -71,3 +73,46 @@ function handleSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSubmit);
 searchCity("Berlin");
+
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
+
+function fahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32) * (5 / 9);
+}
+
+function updateTemperatureUnit(tempCelsius) {
+  let temperatureElement = document.querySelector("#temperature");
+  let currentTemp = parseFloat(temperatureElement.innerHTML);
+  let isCelsius = temperatureElement.innerHTML.includes("°C");
+
+  if (isCelsius) {
+    let tempFahrenheit = celsiusToFahrenheit(tempCelsius);
+    temperatureElement.innerHTML = `${Math.round(tempFahrenheit)}°F`;
+  } else {
+    temperatureElement.innerHTML = `${Math.round(tempCelsius)}°C`;
+  }
+}
+
+document.querySelector("#clink").addEventListener("click", function (event) {
+  let temperatureElement = document.querySelector("#temperature");
+  let currentTemp = parseFloat(temperatureElement.innerHTML);
+  let isCelsius = temperatureElement.innerHTML.includes("°C");
+
+  if (!isCelsius) {
+    let tempCelsius = fahrenheitToCelsius(currentTemp);
+    temperatureElement.innerHTML = `${Math.round(tempCelsius)}°C`;
+  }
+});
+
+document.querySelector("#flink").addEventListener("click", function (event) {
+  let temperatureElement = document.querySelector("#temperature");
+  let currentTemp = parseFloat(temperatureElement.innerHTML);
+  let isCelsius = temperatureElement.innerHTML.includes("°C");
+
+  if (isCelsius) {
+    let tempFahrenheit = celsiusToFahrenheit(currentTemp);
+    temperatureElement.innerHTML = `${Math.round(tempFahrenheit)}°F`;
+  }
+});
