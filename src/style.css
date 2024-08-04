@@ -87,12 +87,13 @@ main {
 }
 
 #icon {
-  width: 80px;
+  width: 70px;
 }
 
 .weather-app-temp {
-  font-size: 85px;
+  font-size: 70px;
   margin-left: 5px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
