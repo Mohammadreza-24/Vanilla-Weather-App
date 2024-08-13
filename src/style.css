@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  justify-content: first baseline;
+  justify-content: center;
   background-color: #eef5ff;
   font-family: "Roboto", sans-serif;
 }
@@ -11,8 +14,8 @@ a {
 .weather-app {
   background-color: #f9f7fe;
   max-width: 600px;
-  margin: 45px auto;
-  padding: 30px;
+  margin: 35px auto;
+  padding: 25px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
 }
@@ -23,6 +26,7 @@ header {
 }
 
 .search-form {
+  display: flex;
   text-align: center;
 }
 
