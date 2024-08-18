@@ -1,4 +1,5 @@
 body {
+  display: ruby-text;
   background-color: #eef5ff;
   font-family: "Roboto", sans-serif;
 }
@@ -8,10 +9,16 @@ a {
   text-decoration: none;
 }
 
+@media (max-width: 576px) {
+  body {
+    margin: 200px 5px 50px 05px;
+  }
+}
+
 .weather-app {
   background-color: #f9f7fe;
   max-width: 600px;
-  margin: 35px auto;
+  margin: 10px auto;
   padding: 25px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
@@ -92,7 +99,7 @@ main {
 }
 
 .weather-app-temp {
-  font-size: 70px;
+  font-size: 60px;
   margin-left: 5px;
   margin-top: 10px;
   font-weight: bold;
@@ -119,7 +126,7 @@ main {
 
 .weather-forecast-icon {
   text-align: center;
-  width: 80px;
+  width: 60px;
   height: 80px;
   display: block;
   margin: 0 auto;
